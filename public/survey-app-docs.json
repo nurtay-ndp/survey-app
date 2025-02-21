@@ -1,0 +1,55 @@
+{
+    "info": {
+        "name": "Survey App",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Questions",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/questions",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "questions"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Submit Response",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"question_id\": 1,\n    \"answer_id\": 2\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/response",
+                    "protocol": "http",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "response"
+                    ]
+                }
+            }
+        }
+    ]
+}
